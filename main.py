@@ -10,7 +10,7 @@ import re # For regular expressions in search
 # --- Configuration ---
 # IMPORTANT: Replace these with your actual details!
 API_TOKEN = '7914179938:AAHqo1ZPgEb_s2SbF9ouvBS_cgf1ID1JiYw' # Get this from @BotFather
-GIRLFRIEND_USER_ID = 6921647429  # 7843995956 Your girlfriend's Telegram User ID (integer)
+GIRLFRIEND_USER_ID = 7843995956  # 7843995956 Your girlfriend's Telegram User ID (integer)
 YOUR_TELEGRAM_USER_ID = 6921647429 # Your Telegram User ID (integer), for forwarding messages
 
 
