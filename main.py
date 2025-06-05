@@ -9,8 +9,8 @@ import re # For regular expressions in search
 
 # --- Configuration ---
 # IMPORTANT: Replace these with your actual details!
-API_TOKEN = '7838288204:AAHnAOvkuaQyGb_5XaJMOPpWOxhUL_1_PEg' # Get this from @BotFather
-GIRLFRIEND_USER_ID = 7843995956  # 7843995956 Your girlfriend's Telegram User ID (integer)
+API_TOKEN = '7914179938:AAHqo1ZPgEb_s2SbF9ouvBS_cgf1ID1JiYw' # Get this from @BotFather
+GIRLFRIEND_USER_ID = 6921647429  # 7843995956 Your girlfriend's Telegram User ID (integer)
 YOUR_TELEGRAM_USER_ID = 6921647429 # Your Telegram User ID (integer), for forwarding messages
 
 
@@ -297,7 +297,7 @@ def handle_click_me(message):
     user_indexes[uid] = (idx + 1) % len(good_girl_messages)
 
 # ======================================================================
-    
+
 def get_love_sub_menu():
     """Returns the inline keyboard for 'Send Me Love' options."""
     keyboard = [
@@ -1100,3 +1100,12 @@ def send_daily_message_and_reschedule():
 
 # --- Polling Loop ---
 print("Bot is running...")
+
+# Start the daily message scheduler in a separate thread
+# Uncomment the line below if you want daily scheduled messages.
+# Remember this requires the bot script to be running continuously on a server!
+# threading.Thread(target=schedule_daily_messages).start()
+
+# Use non_stop=True to keep the bot running even if there are errors,
+# and interval=0 to poll as frequently as possible.
+bot.polling(non_stop=True, interval=0)
