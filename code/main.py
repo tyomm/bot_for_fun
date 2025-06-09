@@ -83,7 +83,9 @@ def send_daily_messages():
         tomorrow = (now + timedelta(days=1)).replace(hour=0, minute=5, second=0, microsecond=0)
         wait_seconds = (tomorrow - now).total_seconds()
         print(f"Sleeping until next day: {wait_seconds // 3600:.1f} hours")
-        time.sleep(wait_seconds)
+        #time.sleep(wait_seconds)
+        time.sleep(5)
+
 
 
 bot.send_message(CHAT_ID, "worked")
