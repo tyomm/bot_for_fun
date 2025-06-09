@@ -1,7 +1,4 @@
-beautifulsoup4==4.12.3
-googlesearch-python==1.2.5
 pyTelegramBotAPI==4.16.1
-python-telegram-bot==21.4
-requests==2.31.0
 schedule==1.2.2
-telebot==0.0.5
+pytz==2025.2
+requests==2.31.0
