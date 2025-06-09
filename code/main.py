@@ -67,28 +67,22 @@ def send_daily_messages():
             sent_count += 1
 
             if sent_count < 3:
-                # delay = random.randint(4 * 3600, 6 * 3600)
-                # print(f"Waiting {delay // 3600} hours and {(delay % 3600) // 60} minutes for next message...")
-                # time.sleep(delay)
+                delay = random.randint(4 * 3600, 6 * 3600)
+                print(f"Waiting {delay // 3600} hours and {(delay % 3600) // 60} minutes for next message...")
+                time.sleep(delay)
 
-                delay = random.randint(10, 15)  # seconds
-                print(f"[TEST MODE] Waiting {delay} seconds for next message...")
-                time.sleep(3)
-
-
-
+                # delay = random.randint(10, 15)  # seconds
+                # print(f"[TEST MODE] Waiting {delay} seconds for next message...")
+                # time.sleep(3)
 
         # Wait until 00:05 Japan time next day
         now = datetime.now(JAPAN_TZ)
         tomorrow = (now + timedelta(days=1)).replace(hour=0, minute=5, second=0, microsecond=0)
         wait_seconds = (tomorrow - now).total_seconds()
         print(f"Sleeping until next day: {wait_seconds // 3600:.1f} hours")
-        #time.sleep(wait_seconds)
-        time.sleep(5)
+        time.sleep(wait_seconds)
+        # time.sleep(5)
 
-
-
-bot.send_message(CHAT_ID, "worked")
 
 # === Start the bot loop ===
 send_daily_messages()
