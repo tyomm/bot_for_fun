@@ -77,6 +77,6 @@ def send_daily_messages():
         wait_seconds = (tomorrow - now).total_seconds()
         print(f"Sleeping until next day: {wait_seconds // 3600:.1f} hours")
         time.sleep(wait_seconds)
-
+bot.send_message(CHAT_ID, "worked")
 # === Start the bot loop ===
 send_daily_messages()
