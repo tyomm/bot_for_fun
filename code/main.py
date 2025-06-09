@@ -72,7 +72,7 @@ def send_daily_messages():
                 # time.sleep(delay)
 
                 delay = random.randint(10, 15)  # seconds
-                bot.send_message(CHAT_ID, "[TEST MODE] Waiting {delay} seconds for next message...")
+                print(f"[TEST MODE] Waiting {delay} seconds for next message...")
                 time.sleep(3)
 
 
